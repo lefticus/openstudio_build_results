@@ -3,10 +3,10 @@ title: OpenStudio-6b127bfb159ee885525d31f4d4c2a1c88b7c4101-x86_64-Linux-Ubuntu-1
 permalink: OpenStudio-6b127bfb159ee885525d31f4d4c2a1c88b7c4101-x86_64-Linux-Ubuntu-14.04-gcc-4.8.html
 tags: data
 layout: ci_results
-date: 2014-05-19 14:40:32
+date: 2014-05-19 14:49:15
 unhandled_failure: false
-build_error_count: 0
-build_warning_count: 0
+build_error_count: 1
+build_warning_count: 4
 package_error_count: 0
 package_warning_count: 0
 test_count: 0
@@ -27,16 +27,50 @@ pull_request_issue_id: ""
 pull_request_base_repository: 
 pull_request_base_ref: 
 device_id: x86_64-Linux-Ubuntu-14.04-gcc-4.8
-pending: true
+pending: false
 analyze_only: false
-build_time: 
-test_time: 
+build_time: 474.191490897
+test_time: 1.5086e-05
 package_time: 
 ---
 
 {
   "build_results": [
-
+    {
+      "filename": "openstudiocore/src/litesql/library/sqlite3.c",
+      "linenumber": "56662",
+      "colnumber": "22",
+      "messagetype": "warning",
+      "message": "array subscript is above array bounds [-Warray-bounds]"
+    },
+    {
+      "filename": "openstudiocore/src/litesql/library/sqlite3.c",
+      "linenumber": "57829",
+      "colnumber": "19",
+      "messagetype": "warning",
+      "message": "‘ePtrmapType’ may be used uninitialized in this function [-Wmaybe-uninitialized]"
+    },
+    {
+      "filename": "openstudiocore/src/litesql/library/sqlite3.c",
+      "linenumber": "57829",
+      "colnumber": "19",
+      "messagetype": "warning",
+      "message": "‘iPtrmapParent’ may be used uninitialized in this function [-Wmaybe-uninitialized]"
+    },
+    {
+      "filename": "openstudiocore/src/ruby_cpp/ruby.cpp",
+      "linenumber": "44",
+      "colnumber": "12",
+      "messagetype": "error",
+      "message": "‘ruby_run’ was not declared in this scope"
+    },
+    {
+      "filename": "openstudiocore/src/sqlite/sqlite3.c",
+      "linenumber": "57443",
+      "colnumber": "22",
+      "messagetype": "warning",
+      "message": "array subscript is above array bounds [-Warray-bounds]"
+    }
   ],
   "test_results": [
 
